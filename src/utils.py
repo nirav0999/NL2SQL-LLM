@@ -4,6 +4,7 @@ import collections
 import pickle
 import os
 import sqlite3
+import csv
 
 #-------------------------JSON Functions-------------------------------------------------------
 def dumpJsonFile(dictionary, filepath, verbose = True, print_dict = False):
@@ -43,5 +44,18 @@ def createSQLDB(db_path, sql_path):
         conn.executescript(sql_file.read())
     conn.close()
 
+
+
+def convert_delimiter(input_file, output_file):
+    with open(input_file, 'r', newline='') as file:
+        reader = csv.reader(file, delimiter='\t')
+        rows = list(reader)
+
+    with open(output_file, 'w', newline='') as file:
+        writer = csv.writer(file, delimiter='|')
+        writer.writerows(rows)
+
+    print(f"Conversion complete. Converted file saved as {output_file}")
+
 if __name__ == "__main__":
-	pass
+    pass
