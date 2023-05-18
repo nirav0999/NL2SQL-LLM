@@ -1,0 +1,6 @@
+Question|SQL Query
+How many parent groups belong to the remote ID '68325244'?|SELECT COUNT(*) AS group_count FROM group_final WHERE remote_id = 68325244;
+What is the name of the parent group with the ID '1e9ccf03-ac55-4ede-982e-8c54cf454be7'?|SELECT name FROM group_final WHERE id = '1e9ccf03-ac55-4ede-982e-8c54cf454be7';
+What is the count of each parent group type that has not been remotely deleted?|SELECT type, COUNT(*) AS type_count FROM group_final WHERE remote_was_deleted = FALSE GROUP BY type;
+How many parent groups have been remotely deleted and belong to the remote ID '44546129'?|SELECT COUNT(*) AS deleted_group_count FROM group_final WHERE remote_was_deleted = TRUE AND remote_id = 44546129;
+How many parent groups have been deleted remotely?|SELECT COUNT(*) AS deleted_count FROM group_final WHERE remote_was_deleted = TRUE;

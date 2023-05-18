@@ -1,0 +1,6 @@
+Question|SQL Query
+How many pay groups are marked as 'Full Time' and have been deleted remotely?|SELECT COUNT(*) AS pay_groups_with_full_time_and_remote_deleted FROM paygroup WHERE pay_group_name = 'Full Time' AND remote_was_deleted = TRUE;
+Which pay groups have 'Temp' as the pay group name and have a remote ID less than 20000000?|SELECT * FROM paygroup WHERE pay_group_name = 'Temp' AND remote_id < 20000000;
+Which pay groups have a remote ID between 40000000 and 60000000 and the pay group name ending with 'r'?|SELECT * FROM paygroup WHERE remote_id BETWEEN 40000000 AND 60000000 AND pay_group_name LIKE '%r';
+How many unique pay groups are there?|SELECT COUNT(DISTINCT pay_group_name) AS unique_pay_groups FROM paygroup;
+What is the maximum remote ID in the paygroup table?|SELECT MAX(remote_id) AS max_remote_id FROM paygroup;

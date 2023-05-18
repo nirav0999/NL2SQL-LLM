@@ -1,0 +1,30 @@
+--- Prompt 1 ---
+Give SQL query for the following -
+
+Question:
+<Question Type>
+
+Table Schema:  [*, id, remote_id]
+Table Name : <Table Name>
+
+Some rows in the table looks like this:
+<Row1>
+<Row2>
+<Row3>
+
+--- Prompt 2 ---
+Can you give me 10 different natural language questions and their corresponding SQL questions specific to this dataset in the format of a combined CSV file in the following format
+
+Index, Question, SQL Query
+
+The delimiter should be "|" instead of comma as a txt file 
+
+
+--- Prompt 3 ---
+Give me 10 more different natural language questions and the corresponding SQL queries in the same format starting from index 11 in a txt file
+
+--- Prompt 4 ---
+Give me 10 more different natural language questions and the corresponding SQL queries in the same format starting from index 21 in a txt file
+
+--- Prompt 5 ---
+Give me 10 more different natural language questions and the corresponding SQL queries in the same format starting from index 31 in a txt file

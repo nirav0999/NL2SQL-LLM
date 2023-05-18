@@ -1,0 +1,41 @@
+Index|Question|SQL Query
+1|How many employees started working in the year 2022?|SELECT COUNT(*) AS num_employees FROM payrollrun WHERE YEAR(start_date) = 2022
+2|What is the total count of remote employees?|SELECT COUNT(*) AS total_remote_employees FROM payrollrun WHERE remote_id IS NOT NULL
+3|How many payroll runs were approved?|SELECT COUNT(*) AS num_approved_runs FROM payrollrun WHERE run_state = 'APPROVED'
+4|What is the average duration of a payroll run in days?|SELECT AVG(DATEDIFF(end_date, start_date)) AS avg_duration FROM payrollrun
+5|How many terminated employees had failed payroll runs?|SELECT COUNT(*) AS num_terminated_failed FROM payrollrun WHERE run_type = 'TERMINATION' AND run_state = 'FAILED'
+6|What is the earliest start date among the payroll runs?|SELECT MIN(start_date) AS earliest_start_date FROM payrollrun
+7|How many payroll runs were corrections?|SELECT COUNT(*) AS num_correction_runs FROM payrollrun WHERE run_type = 'CORRECTION'
+8|What is the percentage of deleted remote employees?|SELECT (COUNT(*) / (SELECT COUNT(*) FROM payrollrun WHERE remote_id IS NOT NULL)) * 100 AS deleted_remote_percentage FROM payrollrun WHERE remote_was_deleted = TRUE
+9|How many payroll runs occurred on the check date?|SELECT COUNT(*) AS num_runs_on_check_date FROM payrollrun WHERE start_date = check_date
+10|What is the maximum duration of a payroll run in days?|SELECT MAX(DATEDIFF(end_date, start_date)) AS max_duration FROM payrollrun
+11|How many employees had payroll runs with a duration of more than 14 days?|SELECT COUNT(*) AS num_employees_long_duration FROM payrollrun WHERE DATEDIFF(end_date, start_date) > 14
+12|What is the total count of payroll runs that were marked as deleted remote employees?|SELECT COUNT(*) AS num_deleted_remote_runs FROM payrollrun WHERE remote_was_deleted = TRUE
+13|How many employees had payroll runs in the year 2023?|SELECT COUNT(DISTINCT id) AS num_employees_2023 FROM payrollrun WHERE YEAR(start_date) = 2023
+14|What is the average number of payroll runs per employee?|SELECT COUNT(*) / COUNT(DISTINCT id) AS avg_runs_per_employee FROM payrollrun
+15|How many payroll runs were of type 'SIGN_ON_BONUS'?|SELECT COUNT(*) AS num_sign_on_bonus_runs FROM payrollrun WHERE run_type = 'SIGN_ON_BONUS'
+16|What is the maximum number of remote employees in a single payroll run?|SELECT MAX(remote_id) AS max_remote_employees FROM payrollrun
+17|How many payroll runs were not approved?|SELECT COUNT(*) AS num_unapproved_runs FROM payrollrun WHERE run_state != 'APPROVED'
+18|What is the earliest check date among the payroll runs?|SELECT MIN(check_date) AS earliest_check_date FROM payrollrun
+19|How many terminated employees had payroll runs in the year 2022?|SELECT COUNT(*) AS num_terminated_runs_2022 FROM payrollrun WHERE run_type = 'TERMINATION' AND YEAR(start_date) = 2022
+20|What is the average duration of payroll runs that occurred on the check date?|SELECT AVG(DATEDIFF(end_date, start_date)) AS avg_duration_on_check_date FROM payrollrun WHERE start_date = check_date
+21|What is the average number of failed payroll runs per employee?|SELECT COUNT(*) / COUNT(DISTINCT id) AS avg_failed_runs_per_employee FROM payrollrun WHERE run_state = 'FAILED'
+22|How many payroll runs occurred in December 2022?|SELECT COUNT(*) AS num_runs_december_2022 FROM payrollrun WHERE YEAR(start_date) = 2022 AND MONTH(start_date) = 12
+23|What is the maximum duration of a payroll run for terminated employees?|SELECT MAX(DATEDIFF(end_date, start_date)) AS max_duration_terminated FROM payrollrun WHERE run_type = 'TERMINATION'
+24|How many payroll runs were marked as deleted remote employees?|SELECT COUNT(*) AS num_deleted_remote_runs FROM payrollrun WHERE remote_was_deleted = TRUE
+25|What is the total count of unique remote employees?|SELECT COUNT(DISTINCT remote_id) AS total_unique_remote_employees FROM payrollrun WHERE remote_id IS NOT NULL
+26|How many payroll runs had the run state of 'FAILED' and the run type of 'CORRECTION'?|SELECT COUNT(*) AS num_failed_correction_runs FROM payrollrun WHERE run_state = 'FAILED' AND run_type = 'CORRECTION'
+27|What is the average duration of payroll runs that occurred in January 2023?|SELECT AVG(DATEDIFF(end_date, start_date)) AS avg_duration_january_2023 FROM payrollrun WHERE YEAR(start_date) = 2023 AND MONTH(start_date) = 1
+28|How many terminated employees had payroll runs of type 'SIGN_ON_BONUS'?|SELECT COUNT(*) AS num_terminated_sign_on_bonus FROM payrollrun WHERE run_type = 'SIGN_ON_BONUS' AND run_state = 'TERMINATION'
+29|What is the total count of payroll runs that occurred on the same start and end dates?|SELECT COUNT(*) AS num_same_start_end_dates FROM payrollrun WHERE start_date = end_date
+30|How many distinct remote employees had payroll runs in the year 2023?|SELECT COUNT(DISTINCT remote_id) AS num_distinct_remote_employees_2023 FROM payrollrun WHERE YEAR(start_date) = 2023
+31|What is the average duration of payroll runs for employees marked as deleted remote employees?|SELECT AVG(DATEDIFF(end_date, start_date)) AS avg_duration_deleted_remote FROM payrollrun WHERE remote_was_deleted = TRUE
+32|How many payroll runs occurred in the month of March?|SELECT COUNT(*) AS num_runs_march FROM payrollrun WHERE MONTH(start_date) = 3
+33|What is the maximum duration of a payroll run for employees marked as deleted remote employees?|SELECT MAX(DATEDIFF(end_date, start_date)) AS max_duration_deleted_remote FROM payrollrun WHERE remote_was_deleted = TRUE
+34|How many payroll runs were corrections for terminated employees?|SELECT COUNT(*) AS num_correction_runs_terminated FROM payrollrun WHERE run_type = 'CORRECTION' AND run_state = 'TERMINATION'
+35|What is the total count of distinct remote employees with failed payroll runs?|SELECT COUNT(DISTINCT remote_id) AS num_distinct_remote_failed FROM payrollrun WHERE run_state = 'FAILED' AND remote_id IS NOT NULL
+36|How many payroll runs occurred in the first quarter of 2023?|SELECT COUNT(*) AS num_runs_first_quarter_2023 FROM payrollrun WHERE YEAR(start_date) = 2023 AND MONTH(start_date) IN (1, 2, 3)
+37|What is the average duration of payroll runs for terminated employees?|SELECT AVG(DATEDIFF(end_date, start_date)) AS avg_duration_terminated FROM payrollrun WHERE run_type = 'TERMINATION'
+38|How many unique remote employees had payroll runs in January 2022?|SELECT COUNT(DISTINCT remote_id) AS num_unique_remote_employees_january_2022 FROM payrollrun WHERE YEAR(start_date) = 2022 AND MONTH(start_date) = 1
+39|What is the total count of distinct remote employees with approved payroll runs?|SELECT COUNT(DISTINCT remote_id) AS num_distinct_remote_approved FROM payrollrun WHERE run_state = 'APPROVED' AND remote_id IS NOT NULL
+40|How many payroll runs occurred on the same start and check dates?|SELECT COUNT(*) AS num_same_start_check_dates FROM payrollrun WHERE start_date = check_date

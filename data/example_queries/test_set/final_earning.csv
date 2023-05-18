@@ -1,0 +1,6 @@
+Question|SQL Query
+How many different types of earnings does each employee have?|SELECT remote_id, COUNT(DISTINCT type) AS distinct_earning_types FROM earning GROUP BY remote_id;
+Which employee has received the highest bonus?|SELECT remote_id FROM earning WHERE type = 'BONUS' ORDER BY amount DESC LIMIT 1;
+Which earnings records have not been deleted?|SELECT * FROM earning WHERE remote_was_deleted = FALSE;
+What is the total amount of earnings for each employee?|SELECT remote_id, SUM(amount) AS total_earnings FROM earning GROUP BY remote_id;
+What is the average amount of bonus earned by each employee?|SELECT remote_id, AVG(amount) AS average_bonus FROM earning WHERE type = 'BONUS' GROUP BY remote_id;

@@ -1,0 +1,21 @@
+Index|Question|SQL Query
+1|What are the unique employee IDs in the dataset?|SELECT DISTINCT employee FROM employeepayrollrun
+2|How many payroll runs were conducted?|SELECT COUNT(DISTINCT payroll_run) FROM employeepayrollrun
+3|What is the average gross pay for each payroll run?|SELECT payroll_run, AVG(gross_pay) AS average_gross_pay FROM employeepayrollrun GROUP BY payroll_run
+4|Which employees have the highest net pay?|SELECT employee, MAX(net_pay) AS highest_net_pay FROM employeepayrollrun GROUP BY employee
+5|What is the total earnings for each employee?|SELECT employee, SUM(earnings) AS total_earnings FROM employeepayrollrun GROUP BY employee
+6|What are the start and end dates for each payroll run?|SELECT payroll_run, start_date, end_date FROM employeepayrollrun
+7|How many employees had deductions in their payroll?|SELECT COUNT(DISTINCT employee) FROM employeepayrollrun WHERE deductions IS NOT NULL
+8|What is the average tax amount for each payroll run?|SELECT payroll_run, AVG(taxes) AS average_tax_amount FROM employeepayrollrun GROUP BY payroll_run
+9|Which employees had remote IDs starting with "e095"?|SELECT employee FROM employeepayrollrun WHERE remote_id LIKE 'e095%'
+10|What is the total number of deleted payroll runs?|SELECT COUNT(*) FROM employeepayrollrun WHERE remote_was_deleted = TRUE
+11|What is the average net pay for each employee?|SELECT employee, AVG(net_pay) AS average_net_pay FROM employeepayrollrun GROUP BY employee
+12|Which payroll runs had the highest gross pay?|SELECT payroll_run, MAX(gross_pay) AS highest_gross_pay FROM employeepayrollrun GROUP BY payroll_run
+13|How many employees had multiple payroll runs?|SELECT employee, COUNT(DISTINCT payroll_run) AS payroll_run_count FROM employeepayrollrun GROUP BY employee HAVING COUNT(DISTINCT payroll_run) > 1
+14|What are the check dates for each payroll run?|SELECT payroll_run, check_date FROM employeepayrollrun
+15|Which employees had the highest deductions?|SELECT employee, MAX(deductions) AS highest_deductions FROM employeepayrollrun GROUP BY employee
+16|What is the total tax amount for each payroll run?|SELECT payroll_run, SUM(taxes) AS total_tax_amount FROM employeepayrollrun GROUP BY payroll_run
+17|How many employees had a specific earnings type?|SELECT COUNT(DISTINCT employee) FROM employeepayrollrun WHERE earnings = 'specific_earnings_type'
+18|Which employees had a specific start date for their payroll run?|SELECT employee FROM employeepayrollrun WHERE start_date = 'specific_start_date'
+19|What is the average net pay for each payroll run?|SELECT payroll_run, AVG(net_pay) AS average_net_pay FROM employeepayrollrun GROUP BY payroll_run
+20|How many employees had their payroll runs deleted?|SELECT COUNT(DISTINCT employee) FROM employeepayrollrun WHERE remote_was_deleted = TRUE

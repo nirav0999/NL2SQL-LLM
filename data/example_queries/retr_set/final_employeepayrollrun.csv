@@ -1,0 +1,16 @@
+Question|SQL Query
+What is the total number of deleted payroll runs?|SELECT COUNT(*) FROM employeepayrollrun WHERE remote_was_deleted = TRUE
+What is the average gross pay for each payroll run?|SELECT payroll_run, AVG(gross_pay) AS average_gross_pay FROM employeepayrollrun GROUP BY payroll_run
+Which employees had a specific start date for their payroll run?|SELECT employee FROM employeepayrollrun WHERE start_date = 'specific_start_date'
+What is the total earnings for each employee?|SELECT employee, SUM(earnings) AS total_earnings FROM employeepayrollrun GROUP BY employee
+"Which employees had remote IDs starting with ""e095""?"|SELECT employee FROM employeepayrollrun WHERE remote_id LIKE 'e095%'
+What is the average net pay for each payroll run?|SELECT payroll_run, AVG(net_pay) AS average_net_pay FROM employeepayrollrun GROUP BY payroll_run
+What are the check dates for each payroll run?|SELECT payroll_run, check_date FROM employeepayrollrun
+What is the average tax amount for each payroll run?|SELECT payroll_run, AVG(taxes) AS average_tax_amount FROM employeepayrollrun GROUP BY payroll_run
+Which employees had the highest deductions?|SELECT employee, MAX(deductions) AS highest_deductions FROM employeepayrollrun GROUP BY employee
+Which employees have the highest net pay?|SELECT employee, MAX(net_pay) AS highest_net_pay FROM employeepayrollrun GROUP BY employee
+How many payroll runs were conducted?|SELECT COUNT(DISTINCT payroll_run) FROM employeepayrollrun
+How many employees had their payroll runs deleted?|SELECT COUNT(DISTINCT employee) FROM employeepayrollrun WHERE remote_was_deleted = TRUE
+What is the average net pay for each employee?|SELECT employee, AVG(net_pay) AS average_net_pay FROM employeepayrollrun GROUP BY employee
+How many employees had deductions in their payroll?|SELECT COUNT(DISTINCT employee) FROM employeepayrollrun WHERE deductions IS NOT NULL
+What are the unique employee IDs in the dataset?|SELECT DISTINCT employee FROM employeepayrollrun

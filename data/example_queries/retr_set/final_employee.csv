@@ -1,26 +1,26 @@
-Question	SQL Query
-Which team has the highest number of female employees?	SELECT team, COUNT(*) AS female_employee_count FROM employee WHERE gender = 'FEMALE' GROUP BY team ORDER BY female_employee_count DESC LIMIT 1
-How many employees have terminated their employment?	SELECT COUNT(*) AS terminated_employees FROM employee WHERE employment_status = 'TERMINATED'
-How many employees have a home location specified?	SELECT COUNT(*) AS employees_with_home_location FROM employee WHERE home_location IS NOT NULL
-How many employees have a work location specified?	SELECT COUNT(*) AS employees_with_work_location FROM employee WHERE work_location IS NOT NULL
-How many employees belong to each pay group?	SELECT pay_group, COUNT(*) AS employee_count FROM employee GROUP BY pay_group
-What is the marital status distribution among employees?	SELECT marital_status, COUNT(*) AS count FROM employee GROUP BY marital_status
-How many employees have a username starting with 'admin'?	SELECT COUNT(*) AS employees_with_admin_username FROM employee WHERE username LIKE 'admin%'
-How many employees have a work location in each city?	SELECT work_location, COUNT(*) AS employee_count FROM employee GROUP BY work_location
-How many employees have a work email that ends with '.org'?	SELECT COUNT(*) AS employees_with_org_email FROM employee WHERE work_email LIKE '%.org'
-How many employees are there in the company?	SELECT COUNT(*) AS total_employees FROM employee
-How many employees have a termination date that falls within a specific range?	SELECT COUNT(*) AS employees_with_specific_termination_date_range FROM employee WHERE termination_date BETWEEN '2022-01-01' AND '2022-12-31'
-What is the marital status of the employee with the employee ID '37515509'?	SELECT marital_status FROM employee WHERE id = '37515509'
-How many employees have a last name that starts with 'D' and contains the letter 'o'?	SELECT COUNT(*) AS employees_with_last_name_do FROM employee WHERE last_name LIKE 'D%o%'
-What is the total count of employees by company?	SELECT company, COUNT(*) AS employee_count FROM employee GROUP BY company
-How many employees have a username that contains the word 'admin'?	SELECT COUNT(*) AS employees_with_admin_username FROM employee WHERE username LIKE '%admin%'
-How many employees have a mobile phone number starting with '+1'?	SELECT COUNT(*) AS employees_with_us_mobile_number FROM employee WHERE mobile_phone_number LIKE '+1%'
-How many employees have a first name that starts with 'A' or 'B'?	SELECT COUNT(*) AS employees_with_initials_ab FROM employee WHERE first_name LIKE 'A%' OR first_name LIKE 'B%'
-Who is the oldest employee in the company?	SELECT first_name, last_name, date_of_birth FROM employee ORDER BY date_of_birth ASC LIMIT 1
-What is the marital status distribution among female employees?	SELECT marital_status, COUNT(*) AS count FROM employee WHERE gender = 'FEMALE' GROUP BY marital_status
-Which team has the highest number of employees with a work location in a specific city?	SELECT team, COUNT(*) AS employee_count FROM employee WHERE work_location = 'Specific City' GROUP BY team ORDER BY employee_count DESC LIMIT 1
-How many employees have both a work location and a home location specified?	SELECT COUNT(*) AS employees_with_work_and_home_location FROM employee WHERE work_location IS NOT NULL AND home_location IS NOT NULL
-Which manager has the highest number of employees?	SELECT manager, COUNT(*) AS employee_count FROM employee GROUP BY manager ORDER BY employee_count DESC LIMIT 1
-What is the marital status of the employee with employee number 23391?	SELECT marital_status FROM employee WHERE employee_number = 23391
-How many employees have a termination date after their start date?	SELECT COUNT(*) AS employees_with_valid_termination FROM employee WHERE termination_date > start_date
-How many employees have a personal email address?	SELECT COUNT(*) AS employees_with_personal_email FROM employee WHERE personal_email IS NOT NULL
+Question|SQL Query
+Which team has the highest number of female employees?|SELECT team, COUNT(*) AS female_employee_count FROM employee WHERE gender = 'FEMALE' GROUP BY team ORDER BY female_employee_count DESC LIMIT 1
+How many employees have terminated their employment?|SELECT COUNT(*) AS terminated_employees FROM employee WHERE employment_status = 'TERMINATED'
+How many employees have a home location specified?|SELECT COUNT(*) AS employees_with_home_location FROM employee WHERE home_location IS NOT NULL
+How many employees have a work location specified?|SELECT COUNT(*) AS employees_with_work_location FROM employee WHERE work_location IS NOT NULL
+How many employees belong to each pay group?|SELECT pay_group, COUNT(*) AS employee_count FROM employee GROUP BY pay_group
+What is the marital status distribution among employees?|SELECT marital_status, COUNT(*) AS count FROM employee GROUP BY marital_status
+How many employees have a username starting with 'admin'?|SELECT COUNT(*) AS employees_with_admin_username FROM employee WHERE username LIKE 'admin%'
+How many employees have a work location in each city?|SELECT work_location, COUNT(*) AS employee_count FROM employee GROUP BY work_location
+How many employees have a work email that ends with '.org'?|SELECT COUNT(*) AS employees_with_org_email FROM employee WHERE work_email LIKE '%.org'
+How many employees are there in the company?|SELECT COUNT(*) AS total_employees FROM employee
+How many employees have a termination date that falls within a specific range?|SELECT COUNT(*) AS employees_with_specific_termination_date_range FROM employee WHERE termination_date BETWEEN '2022-01-01' AND '2022-12-31'
+What is the marital status of the employee with the employee ID '37515509'?|SELECT marital_status FROM employee WHERE id = '37515509'
+How many employees have a last name that starts with 'D' and contains the letter 'o'?|SELECT COUNT(*) AS employees_with_last_name_do FROM employee WHERE last_name LIKE 'D%o%'
+What is the total count of employees by company?|SELECT company, COUNT(*) AS employee_count FROM employee GROUP BY company
+How many employees have a username that contains the word 'admin'?|SELECT COUNT(*) AS employees_with_admin_username FROM employee WHERE username LIKE '%admin%'
+How many employees have a mobile phone number starting with '+1'?|SELECT COUNT(*) AS employees_with_us_mobile_number FROM employee WHERE mobile_phone_number LIKE '+1%'
+How many employees have a first name that starts with 'A' or 'B'?|SELECT COUNT(*) AS employees_with_initials_ab FROM employee WHERE first_name LIKE 'A%' OR first_name LIKE 'B%'
+Who is the oldest employee in the company?|SELECT first_name, last_name, date_of_birth FROM employee ORDER BY date_of_birth ASC LIMIT 1
+What is the marital status distribution among female employees?|SELECT marital_status, COUNT(*) AS count FROM employee WHERE gender = 'FEMALE' GROUP BY marital_status
+Which team has the highest number of employees with a work location in a specific city?|SELECT team, COUNT(*) AS employee_count FROM employee WHERE work_location = 'Specific City' GROUP BY team ORDER BY employee_count DESC LIMIT 1
+How many employees have both a work location and a home location specified?|SELECT COUNT(*) AS employees_with_work_and_home_location FROM employee WHERE work_location IS NOT NULL AND home_location IS NOT NULL
+Which manager has the highest number of employees?|SELECT manager, COUNT(*) AS employee_count FROM employee GROUP BY manager ORDER BY employee_count DESC LIMIT 1
+What is the marital status of the employee with employee number 23391?|SELECT marital_status FROM employee WHERE employee_number = 23391
+How many employees have a termination date after their start date?|SELECT COUNT(*) AS employees_with_valid_termination FROM employee WHERE termination_date > start_date
+How many employees have a personal email address?|SELECT COUNT(*) AS employees_with_personal_email FROM employee WHERE personal_email IS NOT NULL

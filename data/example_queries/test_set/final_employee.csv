@@ -1,6 +1,6 @@
-Question	SQL Query
-How many employees have a work location in a "new york"?	SELECT COUNT(*) AS employees_in_specific_state FROM employee WHERE work_location LIKE '%new york%'
-How many employees have a work email ending with '@acme.com'?	SELECT COUNT(*) AS employees_with_acme_email FROM employee WHERE work_email LIKE '%@acme.com'
-How many employees have a first name starting with 'J' and a last name starting with 'S'?	SELECT COUNT(*) AS employees_with_initials_js FROM employee WHERE first_name LIKE 'J%' AND last_name LIKE 'S%'
-How many employees have a remote ID that starts with 'ABC'?	SELECT COUNT(*) AS employees_with_remote_id FROM employee WHERE remote_id LIKE 'ABC%'
-What is the marital status distribution among male employees?	SELECT marital_status, COUNT(*) AS count FROM employee WHERE gender = 'MALE' GROUP BY marital_status
+Question|SQL Query
+"How many employees have a work location in a ""new york""?"|SELECT COUNT(*) AS employees_in_specific_state FROM employee WHERE work_location LIKE '%new york%'
+How many employees have a work email ending with '@acme.com'?|SELECT COUNT(*) AS employees_with_acme_email FROM employee WHERE work_email LIKE '%@acme.com'
+How many employees have a first name starting with 'J' and a last name starting with 'S'?|SELECT COUNT(*) AS employees_with_initials_js FROM employee WHERE first_name LIKE 'J%' AND last_name LIKE 'S%'
+How many employees have a remote ID that starts with 'ABC'?|SELECT COUNT(*) AS employees_with_remote_id FROM employee WHERE remote_id LIKE 'ABC%'
+What is the marital status distribution among male employees?|SELECT marital_status, COUNT(*) AS count FROM employee WHERE gender = 'MALE' GROUP BY marital_status

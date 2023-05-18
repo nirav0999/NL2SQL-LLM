@@ -1,0 +1,25 @@
+Prompt 1
+Give SQL query for the following -
+
+Question:
+What are the different types of salary?
+
+Table Schema:  id,remote_id,employee,payroll_run,gross_pay,net_pay,start_date,end_date,check_date,earnings,deductions,taxes,remote_was_deleted
+   
+Table Name : employeepayrollrun
+
+Some rows in the table looks like this:
+b6eef2cf-065b-43f9-915a-3c3c0345ce0d,20229641,e095842f-9f90-4ca0-88d3-b49e0004eb82,b8a164a2-ff9c-499e-9181-c695ff50f5d1,1726,508,2023-01-24,2023-02-07,2023-02-07,cb993fa6-98e3-49e6-abfb-f367e74a50b4,,"4c23cabf-f3ea-402f-8da4-9a0666a5a054,2b523c94-67ae-42aa-9707-450432782fce",FALSE
+6d778bc4-53c3-4950-81b7-b9546ad5baf2,20465772,e095842f-9f90-4ca0-88d3-b49e0004eb82,44cf3101-aea6-4dea-bd56-4ddb53600701,5413,928,2023-02-07,2023-02-21,2023-02-21,95bbaec8-4bec-47ba-bce5-294c97725650,,"6ac67280-ab9e-4f63-8b7d-7051f737bc36,33b3b4b2-3420-4728-9d16-637476b9cc48",FALSE
+1db71384-a20e-477e-9f4b-6a150773ec51,25316785,5d20ce0a-44fa-4f45-8833-555fae93d34f,3888d17b-094f-4fbe-b6e2-72de31e25b88,1437,359,2022-09-20,2022-10-04,2022-10-04,6594dc4a-086e-4ad2-97e8-3ccaf1fe84d9,0dd722d7-0b8d-4d69-970d-07afa60123b8,"e9c3fa35-5680-4634-987b-5bbc7253843b,490fd403-df58-4870-bf68-44cda95ca8ea",TRUE
+
+Prompt 2
+Can you give me 10 different natural language questions and their corresponding SQL questions specific to this dataset in the format of a combined CSV file in the following format
+
+Index, Question, SQL Query
+
+The delimiter should be "|" instead of comma as a txt file 
+
+
+Prompt 3
+Give me 10 more different natural language questions and the corresponding SQL queries in the same format starting from index 11 in a txt file

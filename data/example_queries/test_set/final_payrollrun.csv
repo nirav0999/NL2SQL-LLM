@@ -1,0 +1,6 @@
+Question|SQL Query
+How many terminated employees had payroll runs of type 'SIGN_ON_BONUS'?|SELECT COUNT(*) AS num_terminated_sign_on_bonus FROM payrollrun WHERE run_type = 'SIGN_ON_BONUS' AND run_state = 'TERMINATION'
+What is the total count of unique remote employees?|SELECT COUNT(DISTINCT remote_id) AS total_unique_remote_employees FROM payrollrun WHERE remote_id IS NOT NULL
+How many payroll runs occurred on the same start and check dates?|SELECT COUNT(*) AS num_same_start_check_dates FROM payrollrun WHERE start_date = check_date
+What is the earliest check date among the payroll runs?|SELECT MIN(check_date) AS earliest_check_date FROM payrollrun
+How many payroll runs were corrections?|SELECT COUNT(*) AS num_correction_runs FROM payrollrun WHERE run_type = 'CORRECTION'

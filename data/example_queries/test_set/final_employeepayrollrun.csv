@@ -1,0 +1,6 @@
+Question|SQL Query
+Which payroll runs had the highest gross pay?|SELECT payroll_run, MAX(gross_pay) AS highest_gross_pay FROM employeepayrollrun GROUP BY payroll_run
+How many employees had multiple payroll runs?|SELECT employee, COUNT(DISTINCT payroll_run) AS payroll_run_count FROM employeepayrollrun GROUP BY employee HAVING COUNT(DISTINCT payroll_run) > 1
+What is the total tax amount for each payroll run?|SELECT payroll_run, SUM(taxes) AS total_tax_amount FROM employeepayrollrun GROUP BY payroll_run
+How many employees had a specific earnings type?|SELECT COUNT(DISTINCT employee) FROM employeepayrollrun WHERE earnings = 'specific_earnings_type'
+What are the start and end dates for each payroll run?|SELECT payroll_run, start_date, end_date FROM employeepayrollrun
