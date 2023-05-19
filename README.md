@@ -23,7 +23,7 @@ You can find the table names in ```/data/csv_files```.
 
 ![plot](images/stage3.png)*<p style="text-align: center;"></p>*
 
-4. Retreiving the top 5 most similar questions from the synthetic dataset
+4. Retrieving the top 5 most similar questions from the synthetic dataset
 
 ![plot](images/stage4.png)*<p style="text-align: center;"></p>*
 
