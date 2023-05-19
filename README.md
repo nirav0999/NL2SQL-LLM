@@ -134,7 +134,7 @@ To further improve the results, I started providing some example queries in the 
 #### <b> Best Results </b>
 The open-source model ```juierror/flan-t5-text2sql-with-schema``` produced the best results among the models I used for API calls. However, I believe the model's performance could be further improved by incorporating OpenAI APIs, specifically by leveraging the Chain of Thought Prompts and testing them on the OpenAI Playground. This combination, which includes retrieval-based CoT prompting, schema information, samples, and OpenAI API, yielded the best SQL query generation results.
 
-### Future Work
+## Future Work
 <ol> 
     <li> <i> Benchmarking the results </i> - Benchmarking and comparing zero-shot and CoT Prompting results on a dataset would offer stronger evidence for the effectiveness of Retrieval-based CoT Prompting, complementing the observed improvements in query formulation through empirical observations.
     <li> <i>Extending the framework for multiple table </i> - The framework currently supports single table queries, but extending it to accommodate multiple table queries would enhance its functionality.
