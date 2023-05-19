@@ -86,8 +86,8 @@ def cot_inference(question: str, table: List[str], questions : List[str], exampl
 def test(question, DB_FILEPATH = "../data/database/final_db.db", k = 5, table_name = "employee"):
 
     # Retrive the samples
-    test_df = pd.read_csv("../data/example_queries/test_set/final_" +  table_name  + ".csv", delimiter="\t")
-    retr_df = pd.read_csv("../data/example_queries/retr_set/final_" +  table_name  + ".csv", delimiter="\t")
+    test_df = pd.read_csv("../data/example_queries/test_set/final_" +  table_name  + ".csv", delimiter="|")
+    retr_df = pd.read_csv("../data/example_queries/retr_set/final_" +  table_name  + ".csv", delimiter="|")
 
     sample_questions = []
     sample_queries = []
@@ -146,8 +146,8 @@ def test(question, DB_FILEPATH = "../data/database/final_db.db", k = 5, table_na
 
 def test_dataset(DB_FILEPATH = "../data/database/final_db.db", k = 5, table_name = "employee"):
 
-    test_df = pd.read_csv("../data/example_queries/test_set/final_" +  table_name  + ".csv", delimiter="\t")
-    retr_df = pd.read_csv("../data/example_queries/retr_set/final_" +  table_name  + ".csv", delimiter="\t")
+    test_df = pd.read_csv("../data/example_queries/test_set/final_" +  table_name  + ".csv", delimiter="|")
+    retr_df = pd.read_csv("../data/example_queries/retr_set/final_" +  table_name  + ".csv", delimiter="|")
 
     sample_questions = []
     sample_queries = []
