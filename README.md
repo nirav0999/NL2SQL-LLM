@@ -5,7 +5,7 @@ Leveraging In-Context Learning using a Synthetic Dataset for Text-to-SQL Models
 ## Running
 ```
 pip install -r requirements.txt
-python3 main.py
+python3 src/main.py
 ```
 
 ## Run Through
