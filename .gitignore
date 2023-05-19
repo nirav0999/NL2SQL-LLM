@@ -1,7 +1,10 @@
-api-keys/
+api-keys/huggingface.json
+api-keys/openai.json
 src/chatgpt.py
 src/old_code.py
 src/langchain.py
 data/example_queries/retr_set/employee.json
 data/example_queries/retr_set/employee_final.json
 data/example_queries/test_set/employee.json
+data/example_queries/trash
+src/__pycache__
