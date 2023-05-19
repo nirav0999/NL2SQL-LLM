@@ -8,3 +8,4 @@ data/example_queries/retr_set/employee_final.json
 data/example_queries/test_set/employee.json
 data/example_queries/trash
 src/__pycache__
+images/old/

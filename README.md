@@ -74,15 +74,14 @@ Index, Question, SQL Query
 
 The delimiter should be "|" instead of comma as a txt file 
 
-
 --- Prompt 3 ---
 Give me <X> more different natural language questions and the corresponding SQL queries in the same format starting from index 11 in a txt file
 ```
 
-The synthetic dataset generated for each table is present in ```/data/example_queries```. The complete set folder contains the all the syn
+The synthetic dataset generated for each table is present in ```/data/example_queries```. The complete set folder contains the all the synthetic data
 <br>
 
-Note - <X> is the number of synthetic questions to be generated. I used 40 synthetic questions for each table.
+Note - X is the number of synthetic questions to be generated. I used 40 synthetic questions for each table.
 For checking the syntax of the SQL queries, I ran all the queries over the table once (see: ```src/check_retr_data.py```).
 
 
@@ -108,7 +107,7 @@ gpt2
 #### <b> CoT Prompting helps the model output than Zero-Shot Prompting </b>
 Empirically, I have observed that the model produces much better queries with Retrieval-based CoT Prompting than Zero-Shot Prompting.
 
-For instance, For the question <i> What is the earliest check date among the payroll runs? </i> for the table - payrollrun.
+For instance, For the question <i> How many distinct types of earnings are there? </i> for the table - earning
  
 For Zero-Shot Prompting, the model outputs the following query which does not work -
 ![plot](images/stage5a.png)*<p style="text-align: center;"></p>*
