@@ -1,11 +1,6 @@
 # text2sql-LLM
-<hr>
-
 <br>
-
 Leveraging In-Context Learning using a Synthetic Dataset for Text-to-SQL Models
-
-<br>
 
 ## Running
 ```
