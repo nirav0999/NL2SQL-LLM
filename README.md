@@ -31,7 +31,7 @@ You can find the table names in ```/data/csv_files```.
 
 ![plot](images/stage5a.png)*<p style="text-align: center;"></p>*
 
-5. Generating the SQL query using Chain of Thought (CoT) Prompting
+5. Generating the SQL query using In-context Learning
 
 ![plot](images/stage5b.png)*<p style="text-align: center;"></p>*
 
@@ -44,7 +44,7 @@ The methodology consists of the following steps -
 <ol>
     <li> Synthetic Data Generation - Use ChatGPT to generate synthetic data of Natural Language Questions and Corresponding SQL queries for each table.
     <li> Cosine Similarity Calculation - For the test selection, select the top 5 most similar questions to the test question from the synthetic dataset.
-    <li> Chain of Thought (CoT) Prompting - Form a prompt using the top 5 most similar questions and feed it to the model to generate the SQL query.
+    <li> In-context Learning (ICL) Prompting - Form a prompt using the top 5 most similar questions and feed it to the model to generate the SQL query.
 </ol>
 
 <br>
